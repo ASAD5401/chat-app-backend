@@ -30,11 +30,11 @@ app.use(cors({
 app.use(express.json())
 app.use(cookieParser())
 
-app.use('/', express.static(path.join(__dirname, 'web-frontend/build')))
+// app.use('/', express.static(path.join(__dirname, 'web-frontend/build')))
 
-app.get("/", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "./web-frontend/build/index.html"))
-})
+// app.get("/", (req, res, next) => {
+//     res.sendFile(path.join(__dirname, "./web-frontend/build/index.html"))
+// })
 
 
 
@@ -274,10 +274,10 @@ app.get("/api/v1/mypost", (req, res) => {
 
 
 
-app.get("/**", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "./web-frontend/build/index.html"))
-    // res.redirect("/")
-})
+// app.get("/**", (req, res, next) => {
+//     res.sendFile(path.join(__dirname, "./web-frontend/build/index.html"))
+//     // res.redirect("/")
+// })
 
 
 // app.listen(PORT, () => {
